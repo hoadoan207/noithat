@@ -319,8 +319,7 @@
                             </div>
                         </div>
                         <div class="fullwidth">
-                            <div data-overlay-image="" data-overlay-opacity="0.5"
-                                 class="vc_row wpb_row vc_row-fluid projectfea vc_custom_1521802604819 overlay-bg-vc-wapper">
+                            <div data-overlay-image="" data-overlay-opacity="0.5" class="vc_row wpb_row vc_row-fluid projectfea vc_custom_1521802604819 overlay-bg-vc-wapper" style=" background-image: url('<?php echo get_site_url() ?>/wp-content/uploads/2015/10/Portfolio_bg.jpg?id=389') !important;">
                                 <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
@@ -328,10 +327,7 @@
                                                 <div class="vc_row wpb_row vc_inner vc_row-fluid">
                                                     <div class="wpb_column vc_column_container vc_col-sm-12">
                                                         <div class="vc_column-inner ">
-                                                            <div class="wpb_wrapper"><h2
-                                                                        style="color: #ffffff;text-align: center"
-                                                                        class="vc_custom_heading projectitle vc_custom_1521802492136">
-                                                                    DỰ ÁN TIÊU BIỂU</h2></div>
+                                                            <div class="wpb_wrapper"><h2 style="color: #ffffff;text-align: center" class="vc_custom_heading projectitle vc_custom_1521802492136">DỰ ÁN TIÊU BIỂU</h2></div>
                                                         </div>
                                                     </div>
                                                 </div>

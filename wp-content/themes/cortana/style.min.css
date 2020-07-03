@@ -12190,7 +12190,7 @@ footer.main-footer-wrapper {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
 }
-.single-portfolio div#header-sticky-wrapper {
+.post div#header-sticky-wrapper {
     margin-bottom: 20px;
 }
 .portfolio-info-box p,.portfolio-info-box ul {

@@ -6,7 +6,6 @@
         <div class="container">
             <div class="page-title-inner block-center">
                 <div class="block-center-inner">
-                    <h1 >HẠNG MỤC QUẢNG CÁO</h1>
                     <ul class="breadcrumbs "><li class="first"></li><li class="home"><a rel="v:url" href="https://tuongminh.com.vn/" class="home">Trang chủ</a></li><li><span>Sản phẩm</span></li></ul>
                 </div>
             </div>

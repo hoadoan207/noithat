@@ -1,5 +1,5 @@
 <footer class="main-footer-wrapper">
-    <div id="wrapper-footer">
+    <div id="wrapper-footer" style="background: #3d3d3d url('<?php echo get_site_url() ?>/wp-content/uploads/2016/11/pattern_1.png') repeat 50% 22px;">
         <div class="main-footer">
             <div class="footer_inner clearfix">
                 <div class="footer_top_holder col-1">
