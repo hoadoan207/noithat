@@ -623,7 +623,7 @@
 
                 <div class="header-logo-mobile">
                     <a href="<?php echo get_site_url() ?>">
-                        <img src="<?php echo get_site_url() ?>/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
+                        <img src="https://tuongminh.com.vn/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
                              alt="Quảng Cáo Tường Minh - Quảng cáo &#8211; Nội thất"/>
                     </a>
                 </div>
@@ -633,7 +633,7 @@
             <div class="header-left">
                 <div class="header-logo">
                     <a href="<?php echo get_site_url() ?>">
-                        <img src="<?php echo get_site_url() ?>/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
+                        <img src="https://tuongminh.com.vn/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
                              alt="Quảng Cáo Tường Minh - Quảng cáo &#8211; Nội thất"/>
                     </a>
                 </div>
@@ -651,7 +651,7 @@
                         </li>
                         <li id="menu-item-1753"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1724 current_page_item x-menu-item x-sub-menu-standard">
-                            <a href="index.html" class="x-menu-a-text"><span class="x-menu-text">Trang chủ</span></a>
+                            <a href="<?php echo site_url() ?>" class="x-menu-a-text"><span class="x-menu-text">Trang chủ</span></a>
                         </li>
                         <li id="menu-item-2524"
                             class="menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
@@ -660,16 +660,14 @@
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/san-pham" class="x-menu-a-text"><span class="x-menu-text">Sản phẩm</span><b class="x-caret"></b></a>
                             <ul class="x-sub-menu x-sub-menu-standard x-list-style-none x-animate-sign-flip">
-                                <li id="menu-item-3012" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
-                                    <a href="#" class="x-menu-a-text"><span class="x-menu-text">Bảng Hiệu – Hộp Đèn</span></a></li>
-                                <li id="menu-item-3013"
-                                    class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
-                                    <a href="#" class="x-menu-a-text"><span class="x-menu-text">Chữ nổi 3D</span></a></li>
-                                <li id="menu-item-3014" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
-                                    <a href="#" class="x-menu-a-text"><span class="x-menu-text">Gian hàng hội chợ</span></a></li>
-                                <li id="menu-item-3015" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard"><a href="#" class="x-menu-a-text"><span class="x-menu-text">Mặt dựng nhôm Aluminium</span></a></li>
-                                <li id="menu-item-3016" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard"><a href="#" class="x-menu-a-text"><span class="x-menu-text">Nội thất Showroom</span></a></li>
-                                <li id="menu-item-3017" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard"><a href="#" class="x-menu-a-text"><span class="x-menu-text">Pano/Billboad</span></a></li>
+                                <?php $the_query = new WP_Query(array('orderby' => 'date'));
+                                while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                    <li id="menu-item-3012" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
+                                        <a href="<?php echo get_permalink($post->id) ?>" class="x-menu-a-text"><span class="x-menu-text"><?php echo $post->post_title ?></span></a>
+                                    </li>
+                                <?php
+                                endwhile;
+                                ?>
                             </ul>
                         </li>
                         <li id="menu-item-1765"

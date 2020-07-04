@@ -7,35 +7,36 @@
                         <div class="row footer-top-col-1 footer-9">
                             <div class="sidebar col-md-12 col-sm-12 col-1">
                                 <aside id="text-17" class="widget widget_text">
-                                    <div class="textwidget"><p><img style="max-width: 225px;"
-                                                                    src="https://tuongminh.com.vn/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
-                                                                    alt="Quảng Cáo Tường Minh - Quảng cáo – Nội thất"/>
+                                    <div class="textwidget"><p>
+                                            <img style="max-width: 225px;" src="<?php echo get_field("logo_header", "options") ?>" alt=""/>
                                         </p>
-                                        <p>Chúng tôi không ngừng sáng tạo nhằm tạo ra những sản phẩm, dịch vụ mang lại
-                                            giá trị khác biệt, thiết thực cho khách hàng</p>
+                                        <p><?php echo get_field("slogan", "options") ?></p>
                                     </div>
                                 </aside>
                                 <aside id="text-8" class="widget widget_text">
-                                    <div class="textwidget"><p><strong>CÔNG TY TNHH QUẢNG CÁO TƯỜNG MINH</strong></p>
+                                    <div class="textwidget"><p><strong><?php echo get_field("title_info", "options") ?></strong></p>
                                         <ul class="widget-contact-info">
-                                            <li style="line-height: 16px;"><i class="icon icon-location"></i>T014 CC Phú
-                                                Gia Hưng</br> 730/126 Lê Đức Thọ, P.15, Q.Gò Vấp,TP.HCM
+                                            <li style="line-height: 16px;"><i class="icon icon-location"></i>
+                                                <?php echo get_field("address", "options") ?>
                                             </li>
-                                            <li><i class="icon icon-mobile"></i>028 3984 8998</li>
-                                            <li><i class="icon icon-paper-plane"></i>info@tuongminh.com.vn</li>
+                                            <li><i class="icon icon-mobile"></i><?php echo get_field("phone_number", "options") ?></li>
+                                            <li><i class="icon icon-paper-plane"></i><?php echo get_field("email", "options") ?></li>
                                         </ul>
-                                        <div class="hotline" style="font-size:24px">Liên hệ: <a href="tel:090 981 2232"
-                                                                                                style="font-size:20px;color: yellow;">090
-                                                981 2232</a></div>
+                                        <div class="hotline" style="font-size:24px">Liên hệ: <a href="tel:<?php echo get_field("phone_number", "options") ?>" style="font-size:20px;color: yellow;"><?php echo get_field("phone_number", "options") ?></a></div>
                                     </div>
                                 </aside>
                                 <aside id="text-18" class="widget widget_text">
                                     <div class="textwidget"><p><strong>Giờ làm việc</strong></p>
                                         <ul class="widget-contact-info">
-                                            <li><i class="fa fa-clock-o"></i>Thứ 2 -&gt; thứ 6: 8h đến 17h15</li>
-                                            <li><i class="fa fa-clock-o"></i>Thứ 7: 8h đến 16h</li>
-                                            <li><a href="https://www.facebook.com/tuongminh.com.vn/"><i
-                                                            class="icon icon-facebook"></i></a></li>
+                                            <?php
+                                                if( have_rows('time_work', 'options') ):
+                                                    while( have_rows('time_work', 'options') ) : the_row(); ?>
+                                                        <li><i class="fa fa-clock-o"></i><?php echo get_sub_field('content') ?></li>
+                                                    <?php
+                                                    endwhile;
+                                                endif;
+                                                ?>
+                                            <li><a target="_blank" href="<?php echo get_field('fb_url', 'options') ?>"><i class="icon icon-facebook"></i></a></li>
                                         </ul>
                                         <p>&nbsp;</p>
                                     </div>
@@ -55,7 +56,7 @@
 <a class="gotop" href="javascript:">
     <i class="fa fa-angle-up"></i>
 </a>
-<script type="text/javascript"></script>
+
 <script type="text/javascript">
     function revslider_showDoubleJqueryError(sliderID) {
         var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";

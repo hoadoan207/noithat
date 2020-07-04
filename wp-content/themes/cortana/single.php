@@ -4,9 +4,33 @@
         <div class="container">
             <div class="row top-portfolio">
                 <div class="col-md-9">
-                    <div class="item">
-                        <img alt="portfolio" src="<?php echo get_the_post_thumbnail_url($post->id) ?>" />
-                    </div>
+                    <?php
+                    $images = get_field('gallery');
+                    if( $images ): ?>
+                        <div class="post-slideshow">
+                            <div class="portfolio-single-slider">
+                                <div class="bx-wrapper">
+                                    <div class="bx-viewport" aria-live="polite">
+                                        <div class="bxslider">
+                                            <?php foreach( $images as $image ): ?>
+                                                <div>
+                                                    <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else: ?>
+                        <?php
+                        if(get_the_post_thumbnail_url($post->id)) { ?>
+                            <div class="item">
+                                <img alt="portfolio" src="<?php echo get_the_post_thumbnail_url($post->id) ?>" />
+                            </div>
+                        <?php }
+                        ?>
+                    <?php endif; ?>
                 </div>
                 <div class="col-md-3 portfolio-attribute">
                     <h3 class="cortana-title"> <?php echo $post->post_title; ?></h3>
@@ -57,6 +81,9 @@
             <div style="clear: both"></div>
         </div>
     </div>
+
+
+
 </div>
 <?php get_footer(); ?>
 
