@@ -78,3 +78,9 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'		=> false
     ));
 }
+
+
+function dequeue_script() {
+    wp_dequeue_script( 'http://localhost:8001/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' );
+}
+add_action( 'wp_print_scripts', 'dequeue_script', 100 );

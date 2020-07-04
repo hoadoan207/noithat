@@ -76,20 +76,24 @@
 <link rel='stylesheet' id='font-awesome-css'
       href='https://tuongminh.com.vn/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=4.12.1'
       type='text/css' media='all'/>
+
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var _wpcf7 = {
-        "loaderUrl": "https:\/\/tuongminh.com.vn\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
-        "recaptcha": {"messages": {"empty": "Please verify that you are not a robot."}},
-        "sending": "\u0110ang g\u1eedi ...",
-        "cached": "1"
-    };
-    /* ]]> */
-</script>
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.5.2'></script>
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.5'></script>
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.5.2'></script>
+<script type='text/javascript'
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/ladda/dist/spin.min.js?ver=1'></script>
+<script type='text/javascript'
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/ladda/dist/ladda.min.js?ver=1'></script>
+<script type='text/javascript'
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/hoverdir/modernizr.js?ver=1'></script>
+<script type='text/javascript'
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/hoverdir/jquery.hoverdir.js?ver=1'></script>
+<script type='text/javascript'
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/ajax-action.min.js?ver=1'></script>
+
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
 <script type='text/javascript'
         src='https://tuongminh.com.vn/wp-content/themes/cortana/assets/plugins/bootstrap/js/bootstrap.min.js?ver=4.8.14'></script>
 <script type='text/javascript'

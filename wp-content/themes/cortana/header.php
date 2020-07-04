@@ -75,24 +75,7 @@
     <link rel='stylesheet' id='redux-google-fonts-g5plus_cortana_options-css'
           href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%2C900%2C100italic%2C300italic%2C400italic%2C500italic%2C700italic%2C900italic&#038;subset=vietnamese&#038;ver=1586574262'
           type='text/css' media='all'/>
-    <script type='text/javascript'
-            src='<?php echo get_site_url() ?>/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-    <script type='text/javascript'
-            src='<?php echo get_site_url() ?>/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.5.2'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.5.2'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/ladda/dist/spin.min.js?ver=1'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/ladda/dist/ladda.min.js?ver=1'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/hoverdir/modernizr.js?ver=1'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/hoverdir/jquery.hoverdir.js?ver=1'></script>
-    <script type='text/javascript'
-            src='<?php echo get_template_directory_uri() ?>/assets/plugins/cortana-framework/includes/shortcodes/portfolio/assets/js/ajax-action.min.js?ver=1'></script>
+
     <link rel='https://api.w.org/' href='<?php echo get_site_url() ?>/wp-json/'/>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?php echo get_site_url() ?>/xmlrpc.php?rsd"/>
     <link rel="wlwmanifest" type="application/wlwmanifest+xml"
@@ -600,7 +583,7 @@
             }</style>
     </noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
     <script>
         var site_uri = '<?php echo get_template_directory_uri()?>';
     </script>
@@ -667,6 +650,7 @@
                                     </li>
                                 <?php
                                 endwhile;
+                                wp_reset_postdata(); ?>
                                 ?>
                             </ul>
                         </li>
