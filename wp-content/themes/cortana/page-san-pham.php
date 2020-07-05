@@ -40,7 +40,8 @@
                                                                     <figure class="wpb_wrapper vc_figure">
                                                                         <a href="<?php echo get_permalink($post->id) ?>"
                                                                            target="_self"
-                                                                           class="vc_single_image-wrapper vc_box_border_grey">
+                                                                           class="vc_single_image-wrapper vc_box_border_grey"
+                                                                           title="<?php echo $post->post_title ?>">
                                                                             <img class="vc_single_image-img "
                                                                                     src="<?php echo get_the_post_thumbnail_url($post->id) ?>"
                                                                                     width="750" height="450"

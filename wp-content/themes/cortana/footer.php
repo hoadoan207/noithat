@@ -95,19 +95,19 @@
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/themes/cortana/assets/plugins/bootstrap/js/bootstrap.min.js?ver=4.8.14'></script>
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/bootstrap/js/bootstrap.min.js?ver=4.8.14'></script>
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/themes/cortana/assets/js/plugin.min.js?ver=4.8.14'></script>
+        src='<?php echo get_template_directory_uri() ?>/assets/js/plugin.min.js?ver=4.8.14'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var g5plus_framework_constant = {"product_compare": "Compare", "product_wishList": "WishList"};
-    var g5plus_framework_ajax_url = "https:\/\/tuongminh.com.vn\/wp-admin\/admin-ajax.php?activate-multi=true";
-    var g5plus_framework_theme_url = "https:\/\/tuongminh.com.vn\/wp-content\/themes\/cortana\/";
-    var g5plus_framework_site_url = "https:\/\/tuongminh.com.vn";
+    var g5plus_framework_ajax_url = site_uri + "/admin-ajax.php?activate-multi=true";
+    var g5plus_framework_theme_url = site_uri + "/wp-content\/themes\/cortana\/";
+    var g5plus_framework_site_url = site_uri;
     /* ]]> */
 </script>
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/themes/cortana/assets/js/app.min.js?ver=4.8.14'></script>
+        src='<?php echo get_template_directory_uri() ?>/assets/js/app.min.js?ver=4.8.14'></script>
 <script type='text/javascript'
         src='https://tuongminh.com.vn/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.12.1'></script>
 <script type='text/javascript'>
@@ -117,7 +117,7 @@
     /* ]]> */
 </script>
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/themes/cortana/g5plus-framework/xmenu/assets/js/app.min.js?ver=1.0.0.0'></script>
+        src='<?php echo get_template_directory_uri() ?>/g5plus-framework/xmenu/assets/js/app.min.js?ver=1.0.0.0'></script>
 <script>jQuery("style#g5plus_custom_style").append("@media screen and (min-width: 992px) {}");</script>
 
 
