@@ -2,7 +2,7 @@
 <div id="wrapper-content" class="clearfix">
 
     <section class="page-title-wrap page-title-wrap-bg page-title-no-margin-bottom"
-             style="background-image: url(https://tuongminh.com.vn/wp-content/uploads/2015/10/title-news.jpg);;height:50px">
+             style="background-image: url('<?php echo get_field("background_breadcrumbs", "options") ?>');height:50px">
         <div class="page-title-overlay"></div>
         <div class="container">
             <div class="page-title-inner block-center">
@@ -34,6 +34,10 @@
                                                         <?php $the_query = new WP_Query(array('orderby' => 'date', 'post_type' => 'news'));
                                                         $index = 0;
                                                         while ($the_query->have_posts()) : $the_query->the_post();
+                                                            $str = strip_tags($post->post_content);
+                                                            if (strlen($str) > 130){
+                                                                $str = substr($str, 0, 130) . ' [...]';
+                                                            }
                                                         ?>
                                                             <div class="cortana-post-item">
                                                             <div class="cortana-post-image">
@@ -57,9 +61,7 @@
                                                                    href="<?php echo get_permalink($post->id) ?>"
                                                                    rel="bookmark"
                                                                    title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a>
-                                                                <p>Bảng biển quảng cáo ngoài đường thường áp dụng cho
-                                                                    lĩnh vực nào? Billboard và Pano áp dụng được hầu hết
-                                                                    cho mọi [...]</p>
+                                                                <p><?php echo strip_tags($str); ?></p>
                                                             </div>
                                                             <div class="entry-meta">
                                                                 <i class="fa fa-calendar"><span><?php echo get_the_date($post->id) ?></span></i>

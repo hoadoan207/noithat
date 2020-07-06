@@ -79,7 +79,7 @@
                                                             } else {
                                                                 revapi2 = tpj("#rev_slider_2_1").show().revolution({
                                                                     sliderType: "standard",
-                                                                    jsFileLocation: "//tuongminh.com.vn/wp-content/plugins/revslider/public/assets/js/",
+                                                                    jsFileLocation: site_uri + "/assets/plugins/revslider/public/assets/js/",
                                                                     sliderLayout: "fullwidth",
                                                                     dottedOverlay: "none",
                                                                     delay: 9000,

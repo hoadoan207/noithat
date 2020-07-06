@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php setPostViews($post->ID); ?>
 <div id="wrapper-content" class="clearfix">
     <div class="portfolio-full small-slider" id="content">
         <div class="container">

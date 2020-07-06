@@ -2,7 +2,7 @@
 <div id="wrapper-content" class="clearfix">
 
     <section class="page-title-wrap page-title-wrap-bg"
-             style="background-image: url(https://tuongminh.com.vn/wp-content/uploads/2015/10/title-news.jpg);;background-color:#ffffff;height:50px">
+             style="background-image: url('<?php echo get_field("background_breadcrumbs", "options") ?>');background-color:#ffffff;height:50px">
         <div class="page-title-overlay"></div>
         <div class="container">
             <div class="page-title-inner block-center">

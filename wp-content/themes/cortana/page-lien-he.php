@@ -2,7 +2,7 @@
 <div id="wrapper-content" class="clearfix">
 
     <section class="page-title-wrap page-title-wrap-bg page-title-no-margin-bottom"
-             style="background-image: url(https://tuongminh.com.vn/wp-content/uploads/2015/10/title-news.jpg);;height:50px">
+             style="background-image: url('<?php echo get_field("background_breadcrumbs", "options") ?>');height:50px">
         <div class="page-title-overlay"></div>
         <div class="container">
             <div class="page-title-inner block-center">
@@ -10,7 +10,7 @@
                     <h1>Liên hệ</h1>
                     <ul class="breadcrumbs ">
                         <li class="first"></li>
-                        <li class="home"><a rel="v:url" href="https://tuongminh.com.vn/" class="home">Trang chủ</a></li>
+                        <li class="home"><a rel="v:url" href="<?php echo site_url() ?>" class="home">Trang chủ</a></li>
                         <li><span>Liên hệ</span></li>
                     </ul>
                 </div>

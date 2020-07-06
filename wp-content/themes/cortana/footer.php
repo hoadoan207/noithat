@@ -8,7 +8,7 @@
                             <div class="sidebar col-md-12 col-sm-12 col-1">
                                 <aside id="text-17" class="widget widget_text">
                                     <div class="textwidget"><p>
-                                            <img style="max-width: 225px;" src="<?php echo get_field("logo_header", "options") ?>" alt=""/>
+                                            <img style="max-width: 225px;" src="<?php echo get_field("logo_footer", "options") ?>" alt=""/>
                                         </p>
                                         <p><?php echo get_field("slogan", "options") ?></p>
                                     </div>
@@ -74,7 +74,7 @@
       href='//fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic&#038;ver=4.8.14'
       type='text/css' media='all'/>
 <link rel='stylesheet' id='font-awesome-css'
-      href='https://tuongminh.com.vn/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=4.12.1'
+      href='<?php echo get_template_directory_uri() ?>/assets/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=4.12.1'
       type='text/css' media='all'/>
 
 <script type='text/javascript'
@@ -109,7 +109,7 @@
 <script type='text/javascript'
         src='<?php echo get_template_directory_uri() ?>/assets/js/app.min.js?ver=4.8.14'></script>
 <script type='text/javascript'
-        src='https://tuongminh.com.vn/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.12.1'></script>
+        src='<?php echo get_template_directory_uri() ?>/assets/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.12.1'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var xmenu_meta = {"setting-responsive-breakpoint": "991"};

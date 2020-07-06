@@ -1,8 +1,7 @@
 <?php get_header(); ?>
+<?php setPostViews($post->ID); ?>
 <div id="wrapper-content" class="clearfix">
-
-    <section class="page-title-wrap page-title-wrap-bg"
-             style="background-image: url(https://tuongminh.com.vn/wp-content/themes/cortana/assets/images/bg-archive-title.jpg);;height:160pxpx">
+    <section class="page-title-wrap page-title-wrap-bg" style="background-image: url('<?php echo get_field("background_breadcrumbs", "options") ?>');height:160px">
         <div class="page-title-overlay"></div>
         <div class="container">
             <div class="page-title-inner block-center">
@@ -22,98 +21,44 @@
             <div class="row clearfix">
                 <div class="sidebar left-sidebar col-md-3 hidden-sm hidden-xs">
                     <aside id="search-4" class="widget widget_search">
-                        <h4 class="widget-title"><span>Tìm Kiếm</span></h4>
-                        <form class="search-form" method="get" id="searchform" action="https://tuongminh.com.vn/">
-                            <input type="text" value="" name="s" id="s" placeholder="Search Here...">
+                        <form class="search-form" method="get" id="searchform" action="<?php echo site_url() ?>">
+                            <input type="text" value="" name="s" id="s" placeholder="Nhập để tìm kiếm ...">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </aside>
                     <aside id="g5plus-posts-3" class="widget widget-posts">
                         <h4 class="widget-title"><span>Bài viết mới</span></h4>
                         <div class="widget-posts-wrap">
-                            <div class="widget_posts_item clearfix">
-                                <div class="widget-posts-thumbnail">
-                                    <div class="entry-thumbnail">
-                                        <a href="https://tuongminh.com.vn/image-post/"
-                                           title="Modular hotel project completed in Hershey, PA"
-                                           class="entry-thumbnail_overlay">
-                                            <img width="150" height="150" class="img-responsive"
-                                                 src="https://tuongminh.com.vn/wp-content/uploads/2015/10/shutterstock_162135476-150x150.jpg"
-                                                 alt="Modular hotel project completed in Hershey, PA"/>
-                                        </a>
-                                        <a data-rel="prettyPhoto"
-                                           href="https://tuongminh.com.vn/wp-content/uploads/2015/10/shutterstock_162135476.jpg"
-                                           class="prettyPhoto"><i class="fa fa-expand"></i></a>
+                            <?php $the_query = new WP_Query(array(
+                                    'orderby' => 'date',
+                                    'post_type' => 'news',
+                                    'posts_per_page' => 3
+                            ));
+                            $index = 0;
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                            ?>
+                                <div class="widget_posts_item clearfix">
+                                    <div class="widget-posts-thumbnail">
+                                        <div class="entry-thumbnail">
+                                            <a href="<?php echo get_permalink($post->id) ?>"
+                                               title="Modular hotel project completed in Hershey, PA"
+                                               class="entry-thumbnail_overlay">
+                                                <img width="150" height="150" class="img-responsive"
+                                                     src="<?php echo get_the_post_thumbnail_url($post->id) ?>"
+                                                     alt="<?php echo $post->post_title ?>"/>
+                                            </a>
+                                            <a data-rel="prettyPhoto"
+                                               href="<?php echo get_permalink($post->id) ?>"
+                                               class="prettyPhoto"><i class="fa fa-expand"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-posts-content-wrap">
+                                        <a class="widget-posts-title" href="<?php echo get_permalink($post->id) ?>/image-post/"
+                                           rel="bookmark" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a>
+                                        <div class="widget-posts-date"><?php echo get_the_date($post->id) ?> </div>
                                     </div>
                                 </div>
-                                <div class="widget-posts-content-wrap">
-                                    <a class="widget-posts-title" href="https://tuongminh.com.vn/image-post/"
-                                       rel="bookmark" title="Modular hotel project completed in Hershey, PA">Modular
-                                        hotel project completed in Hershey, PA</a>
-
-                                    <div class="widget-posts-date">
-                                        02/11/2015
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="widget_posts_item clearfix">
-                                <div class="widget-posts-thumbnail">
-                                    <div class="entry-thumbnail">
-                                        <a href="https://tuongminh.com.vn/construction-honored-with-acc-builders/"
-                                           title="Construction honored with acc builders"
-                                           class="entry-thumbnail_overlay">
-                                            <img width="150" height="150" class="img-responsive"
-                                                 src="https://tuongminh.com.vn/wp-content/uploads/2015/10/shutterstock_118198573-150x150.jpg"
-                                                 alt="Construction honored with acc builders"/>
-                                        </a>
-                                        <a data-rel="prettyPhoto"
-                                           href="https://tuongminh.com.vn/wp-content/uploads/2015/10/shutterstock_118198573.jpg"
-                                           class="prettyPhoto"><i class="fa fa-expand"></i></a>
-                                    </div>
-                                </div>
-                                <div class="widget-posts-content-wrap">
-                                    <a class="widget-posts-title"
-                                       href="https://tuongminh.com.vn/construction-honored-with-acc-builders/"
-                                       rel="bookmark" title="Construction honored with acc builders">Construction
-                                        honored with acc builders</a>
-
-                                    <div class="widget-posts-date">
-                                        28/10/2015
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="widget_posts_item clearfix">
-                                <div class="widget-posts-thumbnail">
-                                    <div class="entry-thumbnail">
-                                        <a href="https://tuongminh.com.vn/truyen-thong-trong-tham-hoa-niem-tin-va-su-nghi-ngo/"
-                                           title="Truyền thông trong thảm hoạ: Niềm tin và sự nghi ngờ"
-                                           class="entry-thumbnail_overlay">
-                                            <img width="150" height="150" class="img-responsive"
-                                                 src="https://tuongminh.com.vn/wp-content/uploads/2016/09/marketing-strategies-150x150.jpg"
-                                                 alt="Truyền thông trong thảm hoạ: Niềm tin và sự nghi ngờ"/>
-                                        </a>
-                                        <a data-rel="prettyPhoto"
-                                           href="https://tuongminh.com.vn/wp-content/uploads/2016/09/marketing-strategies.jpg"
-                                           class="prettyPhoto"><i class="fa fa-expand"></i></a>
-                                    </div>
-                                </div>
-                                <div class="widget-posts-content-wrap">
-                                    <a class="widget-posts-title"
-                                       href="https://tuongminh.com.vn/truyen-thong-trong-tham-hoa-niem-tin-va-su-nghi-ngo/"
-                                       rel="bookmark" title="Truyền thông trong thảm hoạ: Niềm tin và sự nghi ngờ">Truyền
-                                        thông trong thảm hoạ: Niềm tin và sự nghi ngờ</a>
-
-                                    <div class="widget-posts-date">
-                                        22/09/2016
-                                    </div>
-
-                                </div>
-
-                            </div>
+                            <?php endwhile; ?>
                         </div>
                     </aside>
                 </div>

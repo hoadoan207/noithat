@@ -721,7 +721,7 @@
   content: "\e082";
 }
 .icon-search:before {
-  content: "\e083";
+  content: "\e083"!important;
 }
 .icon-share:before {
   content: "\e084";

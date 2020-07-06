@@ -606,8 +606,7 @@
 
                 <div class="header-logo-mobile">
                     <a href="<?php echo get_site_url() ?>">
-                        <img src="https://tuongminh.com.vn/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
-                             alt="Quảng Cáo Tường Minh - Quảng cáo &#8211; Nội thất"/>
+                        <img src="<?php echo get_field("logo_header", "options") ?>" alt=""/>
                     </a>
                 </div>
             </div>
@@ -616,8 +615,8 @@
             <div class="header-left">
                 <div class="header-logo">
                     <a href="<?php echo get_site_url() ?>">
-                        <img src="https://tuongminh.com.vn/wp-content/uploads/2016/11/Tuong-Minh-Logo1.png"
-                             alt="Quảng Cáo Tường Minh - Quảng cáo &#8211; Nội thất"/>
+                        <img src="<?php echo get_field("logo_header", "options") ?>"
+                             alt=""/>
                     </a>
                 </div>
             </div>
@@ -633,14 +632,14 @@
                             </form>
                         </li>
                         <li id="menu-item-1753"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1724 current_page_item x-menu-item x-sub-menu-standard">
+                            class="<?php echo $post->post_name == 'trang-chu' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-1724 current_page_item x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>" class="x-menu-a-text"><span class="x-menu-text">Trang chủ</span></a>
                         </li>
                         <li id="menu-item-2524"
-                            class="menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
+                            class="<?php echo $post->post_name == 'gioi-thieu' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/gioi-thieu" class="x-menu-a-text"><span class="x-menu-text">Giới thiệu</span></a></li>
                         <li id="menu-item-2734"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
+                            class="<?php echo $post->post_name == 'san-pham' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/san-pham" class="x-menu-a-text"><span class="x-menu-text">Sản phẩm</span><b class="x-caret"></b></a>
                             <ul class="x-sub-menu x-sub-menu-standard x-list-style-none x-animate-sign-flip">
                                 <?php $the_query = new WP_Query(array('orderby' => 'date'));
@@ -655,10 +654,11 @@
                             </ul>
                         </li>
                         <li id="menu-item-1765"
-                            class="menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
+                            class="<?php echo $post->post_name == 'tin-tuc' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/tin-tuc" class="x-menu-a-text"><span class="x-menu-text">Tin tức</span></a>
                         </li>
-                        <li id="menu-item-1754" class="menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
+                        <li id="menu-item-1754"
+                            class="<?php echo $post->post_name == 'lien-he' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/lien-he" class="x-menu-a-text"><span class="x-menu-text">Liên hệ</span></a>
                         </li>
                     </ul>
@@ -676,11 +676,12 @@
     <div id="g5plus-modal-search" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
         <div class="modal-backdrop fade in"></div>
         <div class="g5plus-modal-dialog g5plus-modal-search fade in">
-            <div data-dismiss="modal" class="g5plus-dismiss-modal"><i class="fa fa-close"></i></div>
-            <div class="g5plus-search-wrapper">
-                <input id="search-ajax" type="search" placeholder="Gõ ít nhất 3 ký tự để tìm kiếm">
-                <button><i class="ajax-search-icon icon-search"></i></button>
-            </div>
+            <form class="search-form" method="get" id="searchform" action="<?php echo site_url() ?>">
+                <div class="g5plus-search-wrapper">
+                    <input id="search-ajax" type="search" name="s" placeholder="Gõ ít nhất 3 ký tự để tìm kiếm">
+                    <button><i class="ajax-search-icon icon-search"></i></button>
+                </div>
+            </form>
             <div class="ajax-search-result"></div>
         </div>
     </div>
