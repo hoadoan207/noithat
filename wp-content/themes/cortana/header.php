@@ -92,7 +92,7 @@
         }
 
         .current-menu-item a span {
-            color: #19a0ab;
+            color: #4573c7;
         }
 
         header.header-1 .menu-wrapper .x-nav-menu > li.x-menu-item > a {
@@ -123,11 +123,11 @@
             background: #ffffff;
             border: 1px solid #ffffff;
             text-decoration: none;
-            color: #08A0AB;
+            color: #4573c7;
         }
 
         .get-touch.style2 a:hover {
-            background: #08A0AB;
+            background: #4573c7;
             color: #fff;
             border: 1px solid #fff;
             text-decoration: none;
@@ -244,14 +244,14 @@
 
         .entry-content input[type="submit"]:hover, .comment-text input[type="submit"]:hover {
             background-color: #fff;
-            border-color: #08a0ab;
-            color: #08a0ab;
+            border-color: #4573c7;
+            color: #4573c7;
         }
 
         .cortana-button.style1:hover {
             background-color: #fff;
-            border-color: #08a0ab;
-            color: #08a0ab;
+            border-color: #4573c7;
+            color: #4573c7;
         }
 
         .client-grid img {
@@ -340,7 +340,7 @@
             bottom: 0;
             left: 0;
             height: 40px;
-            background: #19a0ab;
+            background: #4573c7;
             margin: 0;
             font-size: 20px;
             color: white;
@@ -460,7 +460,7 @@
             height: 2px;
             content: '';
             width: 40px;
-            background: #08a0ab;
+            background: #4573c7;
             margin-top: 20px;
             margin: 20px auto 0;
         }
@@ -650,7 +650,6 @@
                                 <?php
                                 endwhile;
                                 wp_reset_postdata(); ?>
-                                ?>
                             </ul>
                         </li>
                         <li id="menu-item-1765"

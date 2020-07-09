@@ -267,7 +267,8 @@
                                                 }
                                             ?>
                                             <div class="vc_btn3-container vc_btn3-center">
-                                                <a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-icon-left vc_btn3-color-black" href="<?php site_url(); ?>/san-pham" title=""><i class="vc_btn3-icon fa fa-refresh"></i> Xem Thêm</a></div>
+                                                <a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-icon-left vc_btn3-color-black"
+                                                   href="<?php echo site_url(); ?>/san-pham" title=""><i class="vc_btn3-icon fa fa-refresh"></i> Xem Thêm</a></div>
                                         </div>
                                     </div>
                                 </div>

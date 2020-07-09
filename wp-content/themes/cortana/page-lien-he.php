@@ -51,28 +51,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
-                                                                <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-                                                                    <div class="wpb_wrapper">
-                                                                        <ul class="widget-contact-info secondary-font">
-                                                                            <li>
-                                                                                <i class="icon icon-location"></i>
-                                                                                <p>T014 CC Phú Gia Hưng, 730/126 Lê Đức
-                                                                                    Thọ, P.15, Q.Gò Vấp,TP.HCM</p>
-                                                                            </li>
-                                                                            <li>
-                                                                                <i class="icon icon-mobile"></i>
-                                                                                <a href="tel:028 3984 8998">028 3984
-                                                                                    8998</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <i class="fa fa-envelope"></i>
-                                                                                <p> info@tuongminh.com.vn</p>
-                                                                            </li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
