@@ -32,7 +32,8 @@
                             <?php $the_query = new WP_Query(array(
                                     'orderby' => 'date',
                                     'post_type' => 'news',
-                                    'posts_per_page' => 3
+                                    'posts_per_page' => 3,
+                                    'post__not_in' => array( $post->ID )
                             ));
                             $index = 0;
                             while ($the_query->have_posts()) : $the_query->the_post();
@@ -53,12 +54,13 @@
                                         </div>
                                     </div>
                                     <div class="widget-posts-content-wrap">
-                                        <a class="widget-posts-title" href="<?php echo get_permalink($post->id) ?>/image-post/"
+                                        <a class="widget-posts-title" href="<?php echo get_permalink($post->id) ?>"
                                            rel="bookmark" title="<?php echo $post->post_title ?>"><?php echo $post->post_title ?></a>
                                         <div class="widget-posts-date"><?php echo get_the_date($post->id) ?> </div>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
+                            <?php endwhile;
+                            wp_reset_postdata();?>
                         </div>
                     </aside>
                 </div>
