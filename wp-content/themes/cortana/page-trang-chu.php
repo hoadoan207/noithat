@@ -28,7 +28,7 @@
                                                                         data-delay="4000" data-rotate="0"
                                                                         data-saveperformance="off" data-title="Slide">
                                                                         <!-- MAIN IMAGE -->
-                                                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                                                                        <img src="<?php echo esc_url($image['url']); ?>"
                                                                              alt="" title="1600&#215;600 TM 06-02-01"
                                                                              width="1600" height="600"
                                                                              data-bgposition="center center" data-bgfit="cover"
