@@ -91,10 +91,6 @@
             margin-top: 3px;
         }
 
-        .current-menu-item a span {
-            color: #4573c7;
-        }
-
         header.header-1 .menu-wrapper .x-nav-menu > li.x-menu-item > a {
             line-height: 50px;
         }
@@ -631,20 +627,17 @@
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </li>
-                        <li id="menu-item-1753"
-                            class="<?php echo $post->post_name == 'trang-chu' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-1724 current_page_item x-menu-item x-sub-menu-standard">
+                        <li class="<?php echo $post->post_name == 'trang-chu' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-1724 current_page_item x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>" class="x-menu-a-text"><span class="x-menu-text">Trang chủ</span></a>
                         </li>
-                        <li id="menu-item-2524"
-                            class="<?php echo $post->post_name == 'gioi-thieu' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
+                        <li class="<?php echo $post->post_name == 'gioi-thieu' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/gioi-thieu" class="x-menu-a-text"><span class="x-menu-text">Giới thiệu</span></a></li>
-                        <li id="menu-item-2734"
-                            class="<?php echo $post->post_name == 'san-pham' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
+                        <li class="<?php echo ($post->post_name == 'san-pham' || is_singular('post')) ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/san-pham" class="x-menu-a-text"><span class="x-menu-text">Sản phẩm</span><b class="x-caret"></b></a>
                             <ul class="x-sub-menu x-sub-menu-standard x-list-style-none x-animate-sign-flip">
                                 <?php $the_query = new WP_Query(array('orderby' => 'date'));
                                 while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                                    <li id="menu-item-3012" class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
                                         <a href="<?php echo get_permalink($post->id) ?>" class="x-menu-a-text"><span class="x-menu-text"><?php echo $post->post_title ?></span></a>
                                     </li>
                                 <?php
@@ -652,12 +645,30 @@
                                 wp_reset_postdata(); ?>
                             </ul>
                         </li>
-                        <li id="menu-item-1765"
-                            class="<?php echo $post->post_name == 'tin-tuc' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
+                        <li class="<?php echo is_category() ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
+                            <a href=# class="x-menu-a-text"><span class="x-menu-text">Lĩnh vực</span><b class="x-caret"></b></a>
+                            <ul class="x-sub-menu x-sub-menu-standard x-list-style-none x-animate-sign-flip">
+                                <?php
+                                    $categories = get_categories( array(
+                                        'orderby' => 'name',
+                                        'order'   => 'ASC'
+                                    ) );
+                                    foreach( $categories as $category ) {
+                                        if ($category->slug != "uncategorized") { ?>
+                                            <li class="<?php echo $category->slug == get_category($cat)->slug ? "current-menu-item" : "" ?> menu-item menu-item-type-post_type menu-item-object-portfolio x-menu-item x-sub-menu-standard">
+                                                <a href="<?php echo get_category_link( $category->term_id ) ?>" class="x-menu-a-text">
+                                                    <span class="x-menu-text"><?php echo $category->name ?></span>
+                                                </a>
+                                            </li>
+                                    <?php }
+                                    }
+                                ?>
+                            </ul>
+                        </li>
+                        <li class="<?php echo ($post->post_name == 'tin-tuc' || is_singular('news')) ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/tin-tuc" class="x-menu-a-text"><span class="x-menu-text">Tin tức</span></a>
                         </li>
-                        <li id="menu-item-1754"
-                            class="<?php echo $post->post_name == 'lien-he' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
+                        <li class="<?php echo $post->post_name == 'lien-he' ? 'current-menu-item' : '' ?> menu-item menu-item-type-post_type menu-item-object-page x-menu-item x-sub-menu-standard">
                             <a href="<?php echo site_url() ?>/lien-he" class="x-menu-a-text"><span class="x-menu-text">Liên hệ</span></a>
                         </li>
                     </ul>

@@ -11895,7 +11895,7 @@ header.main-header .menu-wrapper .x-nav-menu > li.current-menu-ancestor > a.x-me
     margin-top: 3px;
 }
 
-.current-menu-item a span {
+.current-menu-item > a span {
     color: #4573c7;
 }
 
